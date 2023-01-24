@@ -29,11 +29,14 @@ public class Main {
 
     public static double payrollCoasts(Employee[] workers) {
         double sum = 0;
+        int counter = 0;
         for (int i = 0; i < workers.length; i++) {
             sum += workers[i].getSalary();
+            counter++;
         }
         System.out.println("Сумма затрат на зарплаты в месяц= " + sum);
-        sum = sum / workers.length;
+
+        sum = sum / counter;
         System.out.println("Размер средней зарпалты =" + sum);
         return sum;
     }
